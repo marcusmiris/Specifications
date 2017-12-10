@@ -58,6 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stub\ClienteNomeObrigatorioSpecification.cs" />
     <Compile Include="Stub\ClienteStub.cs" />
+    <Compile Include="GarantirQueMethodSpecifications.cs" />
     <Compile Include="VarianceTests.cs" />
   </ItemGroup>
   <ItemGroup>

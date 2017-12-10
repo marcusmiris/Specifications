@@ -43,7 +43,6 @@ namespace Miris.Specifications
         /// </summary>
         [DebuggerStepThrough]
         public static void GarantirQue<T, TSpecification>(this T candidate, TSpecification specification)
-            where T : class
             where TSpecification : ISpecification<T>, ISpecificationComMensagens<T>
         {
             if (specification == null)
@@ -64,7 +63,6 @@ namespace Miris.Specifications
         /// </exception>
         public static void GarantirQue<T, TSpecification>(this T candidate, TSpecification specification,
             string exceptionMessageFormat, params object[] exceptionMessageArgs)
-            where T : class
             where TSpecification : ISpecification<T>
         {
             GarantirQue(candidate, specification, string.Format(exceptionMessageFormat, exceptionMessageArgs));
@@ -78,7 +76,6 @@ namespace Miris.Specifications
         /// </exception>
         public static void GarantirQue<T, TSpecification>(this T candidate, TSpecification specification,
             string mensagemDeErro)
-            where T : class
             where TSpecification : ISpecification<T>
         {
             if (specification == null)
@@ -92,7 +89,6 @@ namespace Miris.Specifications
         ///     Garante que um critério booleano é satisfeito pelo objeto informado.
         /// </summary>
         public static void GarantirQue<T>(this T candidate, Expression<Func<T, bool>> criterio, string mensagemDeErro)
-            where T : class
         {
             if (criterio == null)
                 throw new ArgumentNullException(nameof(criterio));
@@ -111,7 +107,6 @@ namespace Miris.Specifications
             Expression<Func<T, bool>> criterio,
             string exceptionMessageFormat,
             params object[] exceptionMessageArgs)
-            where T : class
         {
             GarantirQue(candidate, criterio, string.Format(exceptionMessageFormat, exceptionMessageArgs));
         }
@@ -121,7 +116,6 @@ namespace Miris.Specifications
         /// </summary>
         public static void GarantirQue<T>(this T candidate, Expression<Func<T, bool>> criterio,
             Func<string> mensagemDeErroFactory)
-            where T : class
         {
             var mensagemDeErro = mensagemDeErroFactory.Invoke();
             GarantirQue(candidate, criterio, mensagemDeErro);

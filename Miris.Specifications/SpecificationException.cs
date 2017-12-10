@@ -8,7 +8,6 @@ namespace Miris.Specifications
     /// <typeparam name="TEntity"></typeparam>
     /// <typeparam name="TSpecification"></typeparam>
     public class SpecificationException<TEntity, TSpecification> : Exception
-        where TEntity : class
         where TSpecification : ISpecification<TEntity>
     {
         public SpecificationException(
