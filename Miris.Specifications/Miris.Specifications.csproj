@@ -1,81 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{28F197C3-B0EF-4B97-BE2A-0EC8FE3A1ECB}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Miris.Specifications</RootNamespace>
-    <AssemblyName>Miris.Specifications</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <Authors>Marcus Miris &lt;marcusmiris@reinodedeus.org&gt;</Authors>
+    <Copyright>Copyright © marcusmiris@reinodedeus.org 2017</Copyright>
+    <Company />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Xml" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AndSpecification.cs" />
-    <Compile Include="ComMensagens\AndSpecificationComMensagens.cs" />
-    <Compile Include="ComMensagens\DirectSpecificationComMensagens.cs" />
-    <Compile Include="ComMensagens\ISpecificationComMensagens.cs" />
-    <Compile Include="ComMensagens\NotSpecificationComMensagens.cs" />
-    <Compile Include="ComMensagens\OrSpecificationComMensagens.cs" />
-    <Compile Include="ComMensagens\SpecificationComMensagens.cs" />
-    <Compile Include="CompositeSpecification.cs" />
-    <Compile Include="DirectSpecification.cs" />
-    <Compile Include="ExpressionBasedSpecifications\AndExpressionBasedSpecification.cs" />
-    <Compile Include="ExpressionBasedSpecifications\CompositeExpressionBasedSpecification.cs" />
-    <Compile Include="ExpressionBasedSpecifications\ExpressionBasedSpecification.cs" />
-    <Compile Include="ExpressionBasedSpecifications\ExpressionBasedSpecificationExtensions.cs" />
-    <Compile Include="ExpressionBasedSpecifications\IExpressionBasedSpecification.cs" />
-    <Compile Include="ExpressionBasedSpecifications\NotExpressionBasedSpecification.cs" />
-    <Compile Include="ExpressionBasedSpecifications\OrExpressionBasedSpecification.cs" />
-    <Compile Include="ExpressionBasedSpecifications\SpecificationExpressionFlatter.cs" />
-    <Compile Include="Internals\Extensions\ObjectExtensions.cs" />
-    <Compile Include="Internals\Extensions\LinqExpressions\Comparision\ExpressionComparison.cs" />
-    <Compile Include="Internals\Extensions\LinqExpressions\Comparision\ExpressionEnumeration.cs" />
-    <Compile Include="Internals\Extensions\LinqExpressions\Comparision\ExpressionEqualityComparer.cs" />
-    <Compile Include="Internals\Extensions\LinqExpressions\Comparision\HashCodeCalculation.cs" />
-    <Compile Include="Internals\Extensions\LinqExpressions\ExpressionBuilder.cs" />
-    <Compile Include="Internals\Extensions\LinqExpressions\ExpressionParameterReplacer.cs" />
-    <Compile Include="Internals\Extensions\LinqExpressions\ParameterRebinder.cs" />
-    <Compile Include="Internals\Extensions\Reflection\InterfaceType.cs" />
-    <Compile Include="Internals\Extensions\Reflection\MethodInfoExtensions.cs" />
-    <Compile Include="Internals\Extensions\Reflection\ReflectionSpecifications.cs" />
-    <Compile Include="Internals\Extensions\TypeExtensions.cs" />
-    <Compile Include="ISpecification.cs" />
-    <Compile Include="LambdaSpecification.cs" />
-    <Compile Include="NotSpecification.cs" />
-    <Compile Include="OrSpecification.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Specification.cs" />
-    <Compile Include="SpecificationException.cs" />
-    <Compile Include="SpecificationExtensions.cs" />
-    <Compile Include="SpecificationFactory.cs" />
-    <Compile Include="TrueSpecification.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
 </Project>
